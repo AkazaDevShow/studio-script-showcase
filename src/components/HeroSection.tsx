@@ -54,12 +54,9 @@ const HeroSection = () => {
             </Card>
           </div>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex justify-center">
             <Button size="lg" className="glow-effect animate-bounce hover:animate-none">
               View My Work
-            </Button>
-            <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-              Get Started Today
             </Button>
           </div>
         </div>

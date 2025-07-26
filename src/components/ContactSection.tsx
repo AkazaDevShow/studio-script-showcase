@@ -49,26 +49,6 @@ const ContactSection = () => {
         </div>
 
         <div className="max-w-4xl mx-auto">
-          {/* Contact Methods */}
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
-            {contactMethods.map((method, index) => {
-              const IconComponent = method.icon;
-              return (
-                <Card key={index} className="card-surface p-6 text-center hover:glow-effect transition-all duration-300">
-                  <IconComponent className={`w-12 h-12 mx-auto mb-4 ${method.color}`} />
-                  <h3 className="text-xl font-bold mb-2 text-neon">{method.title}</h3>
-                  <p className="text-muted-foreground mb-4">{method.description}</p>
-                  <Button 
-                    onClick={method.title === 'Discord' ? handleDiscordContact : undefined}
-                    className="w-full"
-                    variant="outline"
-                  >
-                    {method.action}
-                  </Button>
-                </Card>
-              );
-            })}
-          </div>
 
           {/* Main Discord Contact Card */}
           <Card className="card-surface p-8 text-center mb-8">
