@@ -16,8 +16,8 @@ const MyWorkSection = () => {
 
   const workContent = {
     server: {
-      title: 'Server-Side Scripts',
-      description: 'Secure, optimized server scripts for game logic, data management, and player interactions.',
+      title: '',
+      description: '',
             features: [
       ]
     },
