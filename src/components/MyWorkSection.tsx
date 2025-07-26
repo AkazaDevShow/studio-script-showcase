@@ -18,13 +18,6 @@ const MyWorkSection = () => {
     server: {
       title: 'Server-Side Scripts',
       description: 'Secure, optimized server scripts for game logic, data management, and player interactions.',
-      features: [
-        'Player data management systems',
-        'Game mechanics and rules enforcement',
-        'Anti-exploit protection',
-        'Economy and trading systems',
-        'Leaderboard and statistics tracking'
-      ]
     },
     client: {
       title: 'Client-Side Scripts',
