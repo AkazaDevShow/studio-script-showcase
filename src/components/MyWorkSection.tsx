@@ -15,6 +15,12 @@ const MyWorkSection = () => {
   ];
 
   const workContent = {
+        server: {
+      title: '',
+      description: '',
+            features: [
+      ]
+    },
     client: {
       title: 'Client-Side Scripts',
       description: 'Responsive UI systems and local player experiences that enhance gameplay.',
