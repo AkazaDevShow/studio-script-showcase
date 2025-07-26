@@ -28,31 +28,6 @@ const HeroSection = () => {
             that bring your game ideas to life.
           </p>
           
-          <div className="grid md:grid-cols-3 gap-6 mb-12">
-            <Card className="card-surface p-6 hover:glow-effect transition-all duration-300">
-              <Code className="w-12 h-12 text-neon-cyan mx-auto mb-4" />
-              <h3 className="text-xl font-bold mb-2 text-neon">Clean Code</h3>
-              <p className="text-muted-foreground">
-                Well-structured, optimized Lua scripts that are easy to maintain and extend.
-              </p>
-            </Card>
-            
-            <Card className="card-surface p-6 hover:glow-effect transition-all duration-300">
-              <Zap className="w-12 h-12 text-neon-purple mx-auto mb-4" />
-              <h3 className="text-xl font-bold mb-2 text-neon">Fast Delivery</h3>
-              <p className="text-muted-foreground">
-                Quick turnaround times without compromising on quality or functionality.
-              </p>
-            </Card>
-            
-            <Card className="card-surface p-6 hover:glow-effect transition-all duration-300">
-              <Settings className="w-12 h-12 text-neon-pink mx-auto mb-4" />
-              <h3 className="text-xl font-bold mb-2 text-neon">Custom Solutions</h3>
-              <p className="text-muted-foreground">
-                Tailored scripts designed specifically for your game's unique requirements.
-              </p>
-            </Card>
-          </div>
           
           <div className="flex justify-center">
             <Button size="lg" className="glow-effect animate-bounce hover:animate-none">
