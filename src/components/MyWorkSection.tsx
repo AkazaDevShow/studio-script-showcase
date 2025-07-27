@@ -11,6 +11,12 @@ const videoSources: Record<WorkCategory, string> = {
   global: '/global.mp4',
 };
 
+const categoryTitles: Record<WorkCategory, string> = {
+  server: 'Steal A Somthing Systems ( steal working )',
+  client: 'soon',
+  global: 'soon',
+};
+
 const MyWorkSection = () => {
   const [activeCategory, setActiveCategory] = useState<WorkCategory>('server');
 
@@ -60,7 +66,7 @@ const MyWorkSection = () => {
         <div className="max-w-4xl mx-auto">
           <Card className="card-surface p-8 text-center">
             <h4 className="text-2xl font-bold mb-4 text-neon">
-              Demo Videos - {activeCategory.charAt(0).toUpperCase() + activeCategory.slice(1)}
+              {categoryTitles[activeCategory]}
             </h4>
             <p className="text-muted-foreground mb-6">
               Watch my {activeCategory} scripts in action
@@ -72,7 +78,7 @@ const MyWorkSection = () => {
                 controls
                 muted
                 preload="metadata"
-                key={activeCategory} // forces reload when category changes
+                key={activeCategory}
               >
                 <source src={videoSources[activeCategory]} type="video/mp4" />
                 Your browser does not support the video tag.
