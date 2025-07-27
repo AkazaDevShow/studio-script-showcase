@@ -13,11 +13,6 @@ const MyWorkSection = () => {
     { id: 'global' as WorkCategory, label: 'Global', icon: Globe, color: 'text-neon-pink' },
   ];
 
-  const workContent = {
-    client: {},
-    global: {}
-  };
-
   return (
     <section className="min-h-screen py-20 px-6">
       <div className="container mx-auto">
@@ -53,13 +48,8 @@ const MyWorkSection = () => {
           })}
         </div>
 
-        {/* Content */}
+        {/* Video Section */}
         <div className="max-w-4xl mx-auto">
-          <Card className="card-surface p-8 mb-8">
-            {/* Title and description intentionally removed */}
-          </Card>
-
-          {/* Video Section */}
           <Card className="card-surface p-8 text-center">
             <h4 className="text-2xl font-bold mb-4 text-neon">Demo Videos</h4>
             <p className="text-muted-foreground mb-6">
