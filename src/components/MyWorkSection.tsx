@@ -58,7 +58,7 @@ const MyWorkSection = () => {
   </p>
   <div className="aspect-video bg-surface-darker rounded-lg overflow-hidden border border-primary/30">
     <video className="w-full h-full object-cover" controls muted>
-      <source src="/Case-System.mp4" type="video/mp4" />
+      <source src="public/Case-System.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
   </div>
