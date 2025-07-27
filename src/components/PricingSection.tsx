@@ -1,6 +1,5 @@
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Check, Zap, Crown, Star } from 'lucide-react';
 
 const PricingSection = () => {
   const additionalServices = [
@@ -19,50 +18,6 @@ const PricingSection = () => {
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Transparent, competitive pricing for professional Roblox scripting services
           </p>
-        </div>
-
-        {/* Main Pricing Tiers */}
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
-          {pricingTiers.map((tier, index) => {
-            const IconComponent = tier.icon;
-            return (
-              <Card
-                key={index}
-                className={`
-                  card-surface p-8 text-center relative transition-all duration-300 hover:glow-effect
-                  ${tier.popular ? 'ring-2 ring-primary glow-effect' : ''}
-                `}
-              >
-                {tier.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-primary text-primary-foreground px-4 py-2 rounded-full text-sm font-bold">
-                      Most Popular
-                    </span>
-                  </div>
-                )}
-
-                <IconComponent className={`w-16 h-16 mx-auto mb-4 ${tier.color}`} />
-                <h3 className="text-2xl font-bold mb-2 text-neon">{tier.name}</h3>
-                <div className="text-4xl font-bold mb-6 text-gradient">{tier.price}</div>
-
-                <ul className="space-y-3 mb-8">
-                  {tier.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center gap-3">
-                      <Check className="w-5 h-5 text-primary flex-shrink-0" />
-                      <span className="text-foreground">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                <Button
-                  className={`w-full ${tier.popular ? 'glow-effect animate-pulse hover:animate-none' : ''}`}
-                  variant={tier.popular ? 'default' : 'outline'}
-                >
-                  Choose {tier.name}
-                </Button>
-              </Card>
-            );
-          })}
         </div>
 
         {/* Additional Services */}
