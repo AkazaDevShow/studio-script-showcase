@@ -35,9 +35,6 @@ const PricingSection = () => {
             <p className="text-muted-foreground mb-4">
               Need a custom quote? Contact me for complex projects or bulk orders.
             </p>
-            <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-              Request Custom Quote
-            </Button>
           </div>
         </Card>
       </div>
