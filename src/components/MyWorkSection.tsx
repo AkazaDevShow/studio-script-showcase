@@ -1,15 +1,15 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
-import { Monitor, Globe, Play } from 'lucide-react';
+import { Monitor, Globe, Server, Play } from 'lucide-react';
 
-type WorkCategory = 'client' | 'global';
+type WorkCategory = 'server' | 'client' | 'global';
 
 const MyWorkSection = () => {
-  const [activeCategory, setActiveCategory] = useState<WorkCategory>('client');
+  const [activeCategory, setActiveCategory] = useState<WorkCategory>('server');
 
   const categories = [
-    { id: 'server' as WorkCategory, label: 'Server', icon: Monitor, color: 'text-neon-cyan' },
+    { id: 'server' as WorkCategory, label: 'Server', icon: Server, color: 'text-neon-cyan' },
     { id: 'client' as WorkCategory, label: 'Client', icon: Monitor, color: 'text-neon-purple' },
     { id: 'global' as WorkCategory, label: 'Global', icon: Globe, color: 'text-neon-pink' },
   ];
@@ -31,14 +31,15 @@ const MyWorkSection = () => {
             return (
               <Button
                 key={category.id}
-                variant={activeCategory === category.id ? "default" : "outline"}
+                variant={activeCategory === category.id ? 'default' : 'outline'}
                 size="lg"
                 onClick={() => setActiveCategory(category.id)}
                 className={`
                   flex items-center gap-2 transition-all duration-300
-                  ${activeCategory === category.id 
-                    ? 'bg-primary text-primary-foreground glow-effect' 
-                    : 'hover:glow-effect border-primary/50 hover:border-primary'
+                  ${
+                    activeCategory === category.id
+                      ? 'bg-primary text-primary-foreground glow-effect'
+                      : 'hover:glow-effect border-primary/50 hover:border-primary'
                   }
                 `}
               >
@@ -49,20 +50,24 @@ const MyWorkSection = () => {
           })}
         </div>
 
-        {/* Video Section */}
+        {/* Demo Video Section */}
         <div className="max-w-4xl mx-auto">
-<Card className="card-surface p-8 text-center">
-  <h4 className="text-2xl font-bold mb-4 text-neon">Demo Videos</h4>
-  <p className="text-muted-foreground mb-6">
-    Watch my scripts in action
-  </p>
-  <div className="aspect-video bg-surface-darker rounded-lg overflow-hidden border border-primary/30">
-    <video className="w-full h-full object-cover" controls muted>
-      <source src="public/Case-System.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
-  </div>
-</Card>
+          <Card className="card-surface p-8 text-center">
+            <h4 className="text-2xl font-bold mb-4 text-neon">Demo Videos</h4>
+            <p className="text-muted-foreground mb-6">Watch my scripts in action</p>
+
+            <div className="aspect-video bg-surface-darker rounded-lg overflow-hidden border border-primary/30">
+              <video
+                className="w-full h-full object-cover"
+                controls
+                muted
+                preload="metadata"
+              >
+                <source src="/Case-System.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </Card>
         </div>
       </div>
     </section>
