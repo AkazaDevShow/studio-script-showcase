@@ -3,11 +3,9 @@ import { Button } from '@/components/ui/button';
 
 const PricingSection = () => {
   const additionalServices = [
-    { name: 'Script Debugging', price: '$10' },
-    { name: 'Code Optimization', price: '$20' },
-    { name: 'Custom GUI Design', price: '$25' },
-    { name: 'Script Documentation', price: '$15' },
-    { name: 'Anti-Exploit Protection', price: '$30' },
+    { name: 'One System', price: '1k' },
+    { name: 'Full Small Game', price: '7k' },
+    { name: 'Full Big Game', price: '20k' },
   ];
 
   return (
@@ -22,7 +20,7 @@ const PricingSection = () => {
 
         {/* Additional Services */}
         <Card className="card-surface p-8">
-          <h3 className="text-3xl font-bold mb-6 text-center text-neon">Additional Services</h3>
+          <h3 className="text-3xl font-bold mb-6 text-center text-neon">Robux Price</h3>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {additionalServices.map((service, index) => (
               <div key={index} className="flex justify-between items-center p-4 bg-surface-darker rounded-lg">
@@ -32,9 +30,6 @@ const PricingSection = () => {
             ))}
           </div>
           <div className="text-center mt-8">
-            <p className="text-muted-foreground mb-4">
-              Need a custom quote? Contact me for complex projects or bulk orders.
-            </p>
           </div>
         </Card>
       </div>
