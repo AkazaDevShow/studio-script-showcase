@@ -9,6 +9,7 @@ const MyWorkSection = () => {
   const [activeCategory, setActiveCategory] = useState<WorkCategory>('client');
 
   const categories = [
+    { id: 'server' as WorkCategory, label: 'Server', icon: Monitor, color: 'text-neon-cyan' },
     { id: 'client' as WorkCategory, label: 'Client', icon: Monitor, color: 'text-neon-purple' },
     { id: 'global' as WorkCategory, label: 'Global', icon: Globe, color: 'text-neon-pink' },
   ];
