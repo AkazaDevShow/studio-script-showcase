@@ -61,7 +61,7 @@ const MyWorkSection = () => {
                 <Play className="w-16 h-16 text-primary mx-auto mb-4" />
                 <p className="text-primary">Video content coming soon</p>
                 <p className="text-sm text-muted-foreground mt-2">
-                  <source src="/videoname.mp4" type="video/mp4" />
+                  <source src="/src/components/Case-System.mp4" type="video/mp4" />
                 </p>
               </div>
             </div>
