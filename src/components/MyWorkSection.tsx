@@ -1,12 +1,12 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
-import { Server, Monitor, Globe, Play } from 'lucide-react';
+import { Monitor, Globe, Play } from 'lucide-react';
 
-type WorkCategory = 'server' | 'client' | 'global';
+type WorkCategory = 'client' | 'global';
 
 const MyWorkSection = () => {
-  const [activeCategory, setActiveCategory] = useState<WorkCategory>('server');
+  const [activeCategory, setActiveCategory] = useState<WorkCategory>('client');
 
   const categories = [
     { id: 'client' as WorkCategory, label: 'Client', icon: Monitor, color: 'text-neon-purple' },
