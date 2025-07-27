@@ -1,9 +1,15 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
-import { Monitor, Globe, Server, Play } from 'lucide-react';
+import { Monitor, Globe, Server } from 'lucide-react';
 
 type WorkCategory = 'server' | 'client' | 'global';
+
+const videoSources: Record<WorkCategory, string> = {
+  server: '/server.mp4',
+  client: '/client.mp4',
+  global: '/global.mp4',
+};
 
 const MyWorkSection = () => {
   const [activeCategory, setActiveCategory] = useState<WorkCategory>('server');
@@ -50,11 +56,15 @@ const MyWorkSection = () => {
           })}
         </div>
 
-        {/* Demo Video Section */}
+        {/* Video Section */}
         <div className="max-w-4xl mx-auto">
           <Card className="card-surface p-8 text-center">
-            <h4 className="text-2xl font-bold mb-4 text-neon">Demo Videos</h4>
-            <p className="text-muted-foreground mb-6">Watch my scripts in action</p>
+            <h4 className="text-2xl font-bold mb-4 text-neon">
+              Demo Videos - {activeCategory.charAt(0).toUpperCase() + activeCategory.slice(1)}
+            </h4>
+            <p className="text-muted-foreground mb-6">
+              Watch my {activeCategory} scripts in action
+            </p>
 
             <div className="aspect-video bg-surface-darker rounded-lg overflow-hidden border border-primary/30">
               <video
@@ -62,8 +72,9 @@ const MyWorkSection = () => {
                 controls
                 muted
                 preload="metadata"
+                key={activeCategory} // forces reload when category changes
               >
-                <source src="/Case-System.mp4" type="video/mp4" />
+                <source src={videoSources[activeCategory]} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             </div>
