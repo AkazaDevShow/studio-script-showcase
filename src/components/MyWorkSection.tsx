@@ -17,24 +17,10 @@ const MyWorkSection = () => {
     client: {
       title: 'Client-Side Scripts',
       description: 'Responsive UI systems and local player experiences that enhance gameplay.',
-      features: [
-        'Custom GUI interfaces',
-        'Local effects and animations',
-        'Input handling systems',
-        'Camera control scripts',
-        'Local audio management'
-      ]
     },
     global: {
       title: 'Global Systems',
       description: 'Comprehensive solutions that work across server and client for seamless gameplay.',
-      features: [
-        'Chat systems and commands',
-        'Teleportation networks',
-        'Cross-server data sharing',
-        'Global events and notifications',
-        'Universal configuration systems'
-      ]
     }
   };
 
@@ -79,18 +65,9 @@ const MyWorkSection = () => {
             <h3 className="text-3xl font-bold mb-4 text-neon">
               {workContent[activeCategory].title}
             </h3>
-            <p className="text-lg text-muted-foreground mb-6">
+            <p className="text-lg text-muted-foreground">
               {workContent[activeCategory].description}
             </p>
-            
-            <div className="grid md:grid-cols-2 gap-4 mb-8">
-              {workContent[activeCategory].features.map((feature, index) => (
-                <div key={index} className="flex items-center gap-3">
-                  <div className="w-2 h-2 bg-primary rounded-full glow-effect" />
-                  <span className="text-foreground">{feature}</span>
-                </div>
-              ))}
-            </div>
           </Card>
 
           {/* Video Section */}
