@@ -2,48 +2,6 @@ import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Check, Zap, Crown, Star } from 'lucide-react';
 
-const pricingTiers = [
-  {
-    name: 'Basic',
-    price: '$50',
-    icon: Zap,
-    color: 'text-neon-cyan',
-    features: [
-      'Simple script creation',
-      'Bug fixes',
-      'Basic support',
-    ],
-    popular: false,
-  },
-  {
-    name: 'Pro',
-    price: '$100',
-    icon: Star,
-    color: 'text-neon-purple',
-    features: [
-      'Advanced scripting',
-      'Performance optimization',
-      'Priority support',
-      'Custom GUI design',
-    ],
-    popular: true,
-  },
-  {
-    name: 'Elite',
-    price: '$200',
-    icon: Crown,
-    color: 'text-neon-pink',
-    features: [
-      'Complete game systems',
-      'Multi-player support',
-      'Dedicated assistance',
-      'Regular updates',
-      'Anti-exploit features',
-    ],
-    popular: false,
-  },
-];
-
 const PricingSection = () => {
   const additionalServices = [
     { name: 'Script Debugging', price: '$10' },
