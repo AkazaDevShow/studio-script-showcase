@@ -13,9 +13,6 @@ const PricingSection = () => {
       <div className="container mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-5xl font-bold mb-6 text-gradient">Pricing</h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Transparent, competitive pricing for professional Roblox scripting services
-          </p>
         </div>
 
         {/* Additional Services */}
