@@ -14,14 +14,8 @@ const MyWorkSection = () => {
   ];
 
   const workContent = {
-    client: {
-      title: 'Client-Side Scripts',
-      description: 'Responsive UI systems and local player experiences that enhance gameplay.',
-    },
-    global: {
-      title: 'Global Systems',
-      description: 'Comprehensive solutions that work across server and client for seamless gameplay.',
-    }
+    client: {},
+    global: {}
   };
 
   return (
@@ -62,12 +56,7 @@ const MyWorkSection = () => {
         {/* Content */}
         <div className="max-w-4xl mx-auto">
           <Card className="card-surface p-8 mb-8">
-            <h3 className="text-3xl font-bold mb-4 text-neon">
-              {workContent[activeCategory].title}
-            </h3>
-            <p className="text-lg text-muted-foreground">
-              {workContent[activeCategory].description}
-            </p>
+            {/* Title and description intentionally removed */}
           </Card>
 
           {/* Video Section */}
