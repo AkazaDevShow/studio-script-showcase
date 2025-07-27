@@ -51,21 +51,18 @@ const MyWorkSection = () => {
 
         {/* Video Section */}
         <div className="max-w-4xl mx-auto">
-          <Card className="card-surface p-8 text-center">
-            <h4 className="text-2xl font-bold mb-4 text-neon">Demo Videos</h4>
-            <p className="text-muted-foreground mb-6">
-              Watch my scripts in action (videos will be added here)
-            </p>
-            <div className="aspect-video bg-surface-darker rounded-lg border-2 border-dashed border-primary/30 flex items-center justify-center">
-              <div className="text-center">
-                <Play className="w-16 h-16 text-primary mx-auto mb-4" />
-                <p className="text-primary">Video content coming soon</p>
-                <p className="text-sm text-muted-foreground mt-2">
-                  <source src="/src/components/Case-System.mp4" type="video/mp4" />
-                </p>
-              </div>
-            </div>
-          </Card>
+<Card className="card-surface p-8 text-center">
+  <h4 className="text-2xl font-bold mb-4 text-neon">Demo Videos</h4>
+  <p className="text-muted-foreground mb-6">
+    Watch my scripts in action
+  </p>
+  <div className="aspect-video bg-surface-darker rounded-lg overflow-hidden border border-primary/30">
+    <video className="w-full h-full object-cover" controls muted>
+      <source src="/Case-System.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</Card>
         </div>
       </div>
     </section>
