@@ -8,47 +8,35 @@ type WorkCategory = 'server' | 'client' | 'global';
 const MyWorkSection = () => {
   const [activeCategory, setActiveCategory] = useState<WorkCategory>('server');
 
-  const categories = [
-    { id: 'server' as WorkCategory, label: 'Server', icon: Server, color: 'text-neon-cyan' },
-    { id: 'client' as WorkCategory, label: 'Client', icon: Monitor, color: 'text-neon-purple' },
-    { id: 'global' as WorkCategory, label: 'Global', icon: Globe, color: 'text-neon-pink' },
-  ];
+const categories = [
+  { id: 'client' as WorkCategory, label: 'Client', icon: Monitor, color: 'text-neon-purple' },
+  { id: 'global' as WorkCategory, label: 'Global', icon: Globe, color: 'text-neon-pink' },
+];
 
-  const workContent = {
-        server: {
-      title: 'Client-Side Scripts',
-      description: 'Responsive UI systems and local player experiences that enhance gameplay.',
-      features: [
-        'Custom GUI interfaces',
-        'Local effects and animations',
-        'Input handling systems',
-        'Camera control scripts',
-        'Local audio management'
-      ]
-    },
-    client: {
-      title: 'Client-Side Scripts',
-      description: 'Responsive UI systems and local player experiences that enhance gameplay.',
-      features: [
-        'Custom GUI interfaces',
-        'Local effects and animations',
-        'Input handling systems',
-        'Camera control scripts',
-        'Local audio management'
-      ]
-    },
-    global: {
-      title: 'Global Systems',
-      description: 'Comprehensive solutions that work across server and client for seamless gameplay.',
-      features: [
-        'Chat systems and commands',
-        'Teleportation networks',
-        'Cross-server data sharing',
-        'Global events and notifications',
-        'Universal configuration systems'
-      ]
-    }
-  };
+const workContent = {
+  client: {
+    title: 'Client-Side Scripts',
+    description: 'Responsive UI systems and local player experiences that enhance gameplay.',
+    features: [
+      'Custom GUI interfaces',
+      'Local effects and animations',
+      'Input handling systems',
+      'Camera control scripts',
+      'Local audio management'
+    ]
+  },
+  global: {
+    title: 'Global Systems',
+    description: 'Comprehensive solutions that work across server and client for seamless gameplay.',
+    features: [
+      'Chat systems and commands',
+      'Teleportation networks',
+      'Cross-server data sharing',
+      'Global events and notifications',
+      'Universal configuration systems'
+    ]
+  }
+};
 
   return (
     <section className="min-h-screen py-20 px-6">
