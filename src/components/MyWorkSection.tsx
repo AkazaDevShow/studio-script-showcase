@@ -15,6 +15,17 @@ const MyWorkSection = () => {
   ];
 
   const workContent = {
+        server: {
+      title: 'Client-Side Scripts',
+      description: 'Responsive UI systems and local player experiences that enhance gameplay.',
+      features: [
+        'Custom GUI interfaces',
+        'Local effects and animations',
+        'Input handling systems',
+        'Camera control scripts',
+        'Local audio management'
+      ]
+    },
     client: {
       title: 'Client-Side Scripts',
       description: 'Responsive UI systems and local player experiences that enhance gameplay.',
