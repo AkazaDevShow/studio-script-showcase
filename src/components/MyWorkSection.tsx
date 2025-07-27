@@ -9,23 +9,11 @@ const MyWorkSection = () => {
   const [activeCategory, setActiveCategory] = useState<WorkCategory>('server');
 
   const categories = [
-    { id: 'server' as WorkCategory, label: 'Server', icon: Server, color: 'text-neon-cyan' },
     { id: 'client' as WorkCategory, label: 'Client', icon: Monitor, color: 'text-neon-purple' },
     { id: 'global' as WorkCategory, label: 'Global', icon: Globe, color: 'text-neon-pink' },
   ];
 
   const workContent = {
-        server: {
-      title: 'Client-Side Scripts',
-      description: 'Responsive UI systems and local player experiences that enhance gameplay.',
-      features: [
-        'Custom GUI interfaces',
-        'Local effects and animations',
-        'Input handling systems',
-        'Camera control scripts',
-        'Local audio management'
-      ]
-    },
     client: {
       title: 'Client-Side Scripts',
       description: 'Responsive UI systems and local player experiences that enhance gameplay.',
