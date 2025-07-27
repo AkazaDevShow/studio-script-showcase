@@ -67,22 +67,6 @@ const ContactSection = () => {
               Open Discord DM
             </Button>
           </Card>
-
-          {/* Response Times */}
-          <Card className="card-surface p-6">
-            <div className="flex items-center gap-3 mb-4">
-              <Clock className="w-6 h-6 text-primary" />
-              <h4 className="text-xl font-bold text-neon">Response Times</h4>
-            </div>
-            <div className="grid sm:grid-cols-3 gap-4">
-              {responseTime.map((item, index) => (
-                <div key={index} className="text-center p-4 bg-surface-darker rounded-lg">
-                  <div className="text-primary font-bold">{item.time}</div>
-                  <div className="text-muted-foreground">{item.duration}</div>
-                </div>
-              ))}
-            </div>
-          </Card>
         </div>
       </div>
     </section>
