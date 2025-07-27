@@ -6,7 +6,7 @@ import { Monitor, Globe, Server } from 'lucide-react';
 type WorkCategory = 'server' | 'client' | 'global';
 
 const videoSources: Record<WorkCategory, string> = {
-  server: '/Steal-A-System.mp4',
+  server: '/Case-System.mp4',
   client: '/client.mp4',
   global: '/global.mp4',
 };
