@@ -4,10 +4,9 @@ import Navigation from '@/components/Navigation';
 import MyWorkSection from '@/components/MyWorkSection';
 import PricingSection from '@/components/PricingSection';
 import ContactSection from '@/components/ContactSection';
-import ReviewsSection from '@/components/ReviewsSection';
 import TermsSection from '@/components/TermsSection';
 
-type Section = 'home' | 'work' | 'pricing' | 'contact' | 'reviews' | 'terms';
+type Section = 'home' | 'work' | 'pricing' | 'contact' | 'terms';
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState<Section>('home');
