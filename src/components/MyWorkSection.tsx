@@ -7,7 +7,7 @@ type WorkCategory = 'server' | 'client';
 
 const videoSources: Record<WorkCategory, string> = {
   server: '/Steal-A-System.mp4',
-  client: '/client.mp4',
+  client: '/Case-System.mp4',
 };
 
 const categoryTitles: Record<WorkCategory, string> = {
