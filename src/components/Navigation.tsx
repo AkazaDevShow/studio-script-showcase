@@ -22,17 +22,6 @@ const Navigation = ({ activeSection, onSectionChange }: NavigationProps) => {
           <div className="text-2xl font-bold text-gradient">
             Roblox Scripter
           </div>
-          <div className="flex space-x-4">
-            {navItems.map((item) => (
-              <Button
-                key={item.id}
-                variant={activeSection === item.id ? 'default' : 'ghost'}
-                onClick={() => onSectionChange(item.id)}
-              >
-                {item.label}
-              </Button>
-            ))}
-          </div>
         </div>
       </div>
     </nav>
