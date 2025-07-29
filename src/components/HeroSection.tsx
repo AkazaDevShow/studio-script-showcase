@@ -27,18 +27,9 @@ const HeroSection = ({ onSectionChange }: HeroSectionProps) => {
           </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
-            I'm AkazaDev, a developer with 3 years of experience in Lua scripting.
+           I'm AkazaDev, a developer with 3 years of experience in Lua scripting. You can view some of my work by clicking "My Work" in the top bar
           </p>
           
-          <div className="flex justify-center">
-            <Button
-              size="lg"
-              className="glow-effect animate-bounce hover:animate-none"
-              onClick={() => onSectionChange('work')}
-            >
-              View My Work
-            </Button>
-          </div>
         </div>
       </div>
     </section>
