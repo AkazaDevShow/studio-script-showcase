@@ -1,7 +1,6 @@
-import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
-import { Monitor, Globe, Server } from 'lucide-react';
+import { Monitor, Server } from 'lucide-react';
 
 type WorkCategory = 'server' | 'client';
 
@@ -20,14 +19,12 @@ const someinfoaboutvideo: Record<WorkCategory, string> = {
   client: 'i try make ',
 };
 
+const categories = [
+  { id: 'server' as WorkCategory, label: 'Server', icon: Server, color: 'text-neon-cyan' },
+  { id: 'client' as WorkCategory, label: 'Client', icon: Monitor, color: 'text-neon-purple' },
+];
+
 const MyWorkSection = () => {
-  const [activeCategory, setActiveCategory] = useState<WorkCategory>('server');
-
-  const categories = [
-    { id: 'server' as WorkCategory, label: 'Server', icon: Server, color: 'text-neon-cyan' },
-    { id: 'client' as WorkCategory, label: 'Client', icon: Monitor, color: 'text-neon-purple' },
-  ];
-
   return (
     <section className="min-h-screen py-20 px-6">
       <div className="container mx-auto">
@@ -38,60 +35,32 @@ const MyWorkSection = () => {
           </p>
         </div>
 
-        {/* Category Buttons */}
-        <div className="flex justify-center gap-4 mb-12">
-          {categories.map((category) => {
-            const IconComponent = category.icon;
-            return (
-              <Button
-                key={category.id}
-                variant={activeCategory === category.id ? 'default' : 'outline'}
-                size="lg"
-                onClick={() => setActiveCategory(category.id)}
-                className={`
-                  flex items-center gap-2 transition-all duration-300
-                  ${
-                    activeCategory === category.id
-                      ? 'bg-primary text-primary-foreground glow-effect'
-                      : 'hover:glow-effect border-primary/50 hover:border-primary'
-                  }
-                `}
-              >
-                <IconComponent className={`w-5 h-5 ${category.color}`} />
-                {category.label}
-              </Button>
-            );
-          })}
-        </div>
+        {/* Show videos side by side */}
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+          {categories.map(({ id }) => (
+            <Card key={id} className="card-surface p-8 text-center">
+              <h4 className="text-2xl font-bold mb-4 text-neon">
+                {categoryTitles[id]}
+              </h4>
+              <p className="text-muted-foreground mb-6">
+                {someinfoaboutvideo[id]}
+              </p>
 
-        {/* Video Section */}
-<div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-  {Object.keys(videoSources).map((key) => {
-    const category = key as WorkCategory;
-    return (
-      <Card key={category} className="card-surface p-8 text-center">
-        <h4 className="text-2xl font-bold mb-4 text-neon">
-          {categoryTitles[category]}
-        </h4>
-        <p className="text-muted-foreground mb-6">
-          {someinfoaboutvideo[category]}
-        </p>
-
-        <div className="aspect-video bg-surface-darker rounded-lg overflow-hidden border border-primary/30">
-          <video
-            className="w-full h-full object-cover"
-            controls
-            muted
-            preload="metadata"
-          >
-            <source src={videoSources[category]} type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
+              <div className="aspect-video bg-surface-darker rounded-lg overflow-hidden border border-primary/30">
+                <video
+                  className="w-full h-full object-cover"
+                  controls
+                  muted
+                  preload="metadata"
+                >
+                  <source src={videoSources[id]} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </Card>
+          ))}
         </div>
-      </Card>
-    );
-  })}
-</div>
+      </div>
     </section>
   );
 };
