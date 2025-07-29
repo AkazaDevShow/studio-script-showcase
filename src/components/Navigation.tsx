@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button';
 
-type Section = 'home' | 'work' | 'pricing' | 'contact' | 'terms';
+type Section = 'home' | 'work' | 'pricing' | 'contact';
 
 interface NavigationProps {
   activeSection: Section;
@@ -13,7 +13,6 @@ const Navigation = ({ activeSection, onSectionChange }: NavigationProps) => {
     { id: 'work' as Section, label: 'My Work' },
     { id: 'pricing' as Section, label: 'Pricing' },
     { id: 'contact' as Section, label: 'Contact' },
-    { id: 'terms' as Section, label: 'Terms' },
   ];
 
   return (
