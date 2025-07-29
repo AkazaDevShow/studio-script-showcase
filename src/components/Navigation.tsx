@@ -23,11 +23,6 @@ const Navigation = ({ activeSection, onSectionChange }: NavigationProps) => {
           <div className="text-2xl font-bold text-gradient">
             Roblox Scripter
           </div>
-          
-          <div className="flex items-center gap-2">
-            {navItems.map((item) => (
-            ))}
-          </div>
         </div>
       </div>
     </nav>
