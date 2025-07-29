@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button';
 
-type Section = 'home' | 'work' | 'pricing' | 'contact' | 'reviews' | 'terms';
+type Section = 'home' | 'work' | 'pricing' | 'contact' | 'terms';
 
 interface NavigationProps {
   activeSection: Section;
@@ -13,7 +13,6 @@ const Navigation = ({ activeSection, onSectionChange }: NavigationProps) => {
     { id: 'work' as Section, label: 'My Work' },
     { id: 'pricing' as Section, label: 'Pricing' },
     { id: 'contact' as Section, label: 'Contact' },
-    { id: 'reviews' as Section, label: 'Reviews' },
     { id: 'terms' as Section, label: 'Terms' },
   ];
 
@@ -27,20 +26,6 @@ const Navigation = ({ activeSection, onSectionChange }: NavigationProps) => {
           
           <div className="flex items-center gap-2">
             {navItems.map((item) => (
-              <Button
-                key={item.id}
-                variant={activeSection === item.id ? "default" : "ghost"}
-                onClick={() => onSectionChange(item.id)}
-                className={`
-                  transition-all duration-300 hover:glow-effect
-                  ${activeSection === item.id 
-                    ? 'bg-primary text-primary-foreground glow-effect' 
-                    : 'hover:bg-secondary text-foreground hover:text-neon-cyan'
-                  }
-                `}
-              >
-                {item.label}
-              </Button>
             ))}
           </div>
         </div>
