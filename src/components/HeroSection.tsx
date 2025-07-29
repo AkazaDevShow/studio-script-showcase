@@ -23,16 +23,18 @@ const HeroSection = () => {
           </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
-            Professional Lua scripting services for your Roblox games. 
-            Specializing in server-side, client-side, and global systems 
-            that bring your game ideas to life.
+I'm AkazaDev, a developer with 3 years of experience in Lua scripting
           </p>
           
           
           <div className="flex justify-center">
-            <Button size="lg" className="glow-effect animate-bounce hover:animate-none">
-              View My Work
-            </Button>
+<Button
+  size="lg"
+  className="glow-effect animate-bounce hover:animate-none"
+  onClick={() => window.open('https://your-portfolio-link.com', '_blank')}
+>
+  View My Work
+</Button>
           </div>
         </div>
       </div>
