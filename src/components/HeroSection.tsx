@@ -3,6 +3,12 @@ import { Card } from '@/components/ui/card';
 import { Code, Zap, Settings } from 'lucide-react';
 import heroBackground from '@/assets/hero-background.jpg';
 
+type Section = 'home' | 'work' | 'pricing' | 'contact';
+
+interface HeroSectionProps {
+  onSectionChange: (section: Section) => void;
+}
+
 const HeroSection = () => {
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
@@ -28,13 +34,13 @@ I'm AkazaDev, a developer with 3 years of experience in Lua scripting
           
           
           <div className="flex justify-center">
-<Button
-  size="lg"
-  className="glow-effect animate-bounce hover:animate-none"
-  onClick={() => window.open('https://your-portfolio-link.com', '_blank')}
->
-  View My Work
-</Button>
+            <Button
+              size="lg"
+              className="glow-effect animate-bounce hover:animate-none"
+              onClick={() => onSectionChange('work')}
+            >
+              View My Work
+            </Button>
           </div>
         </div>
       </div>
