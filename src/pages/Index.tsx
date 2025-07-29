@@ -22,8 +22,6 @@ const Index = () => {
         return <PricingSection />;
       case 'contact':
         return <ContactSection />;
-      case 'reviews':
-        return <ReviewsSection />;
       case 'terms':
         return <TermsSection />;
       default:
