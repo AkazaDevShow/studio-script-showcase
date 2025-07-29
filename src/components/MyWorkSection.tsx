@@ -15,6 +15,11 @@ const categoryTitles: Record<WorkCategory, string> = {
   client: 'soon',
 };
 
+const someinfoaboutvideo: Record<WorkCategory, string> = {
+  server: 'Steal A Somthing Systems ( steal working )',
+  client: 'soon',
+};
+
 const MyWorkSection = () => {
   const [activeCategory, setActiveCategory] = useState<WorkCategory>('server');
 
@@ -66,7 +71,7 @@ const MyWorkSection = () => {
               {categoryTitles[activeCategory]}
             </h4>
             <p className="text-muted-foreground mb-6">
-              Watch my {activeCategory} scripts in action
+              {someinfoaboutvideo[activeCategory]}
             </p>
 
             <div className="aspect-video bg-surface-darker rounded-lg overflow-hidden border border-primary/30">
