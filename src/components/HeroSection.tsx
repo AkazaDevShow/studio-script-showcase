@@ -1,6 +1,4 @@
 import { Button } from '@/components/ui/button';
-import { Card } from '@/components/ui/card';
-import { Code, Zap, Settings } from 'lucide-react';
 import heroBackground from '@/assets/hero-background.jpg';
 
 type Section = 'home' | 'work' | 'pricing' | 'contact';
@@ -29,7 +27,7 @@ const HeroSection = ({ onSectionChange }: HeroSectionProps) => {
           </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
-            I'm AkazaDev, a developer with 3 years of experience in Lua scripting
+            I'm AkazaDev, a developer with 3 years of experience in Lua scripting.
           </p>
           
           <div className="flex justify-center">
