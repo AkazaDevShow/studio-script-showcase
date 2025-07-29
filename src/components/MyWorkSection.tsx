@@ -3,18 +3,16 @@ import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Monitor, Globe, Server } from 'lucide-react';
 
-type WorkCategory = 'server' | 'client' | 'global';
+type WorkCategory = 'server' | 'client';
 
 const videoSources: Record<WorkCategory, string> = {
   server: '/Steal-A-System.mp4',
   client: '/client.mp4',
-  global: '/global.mp4',
 };
 
 const categoryTitles: Record<WorkCategory, string> = {
   server: 'Steal A Somthing Systems ( steal working )',
   client: 'soon',
-  global: 'soon',
 };
 
 const MyWorkSection = () => {
@@ -23,7 +21,6 @@ const MyWorkSection = () => {
   const categories = [
     { id: 'server' as WorkCategory, label: 'Server', icon: Server, color: 'text-neon-cyan' },
     { id: 'client' as WorkCategory, label: 'Client', icon: Monitor, color: 'text-neon-purple' },
-    { id: 'global' as WorkCategory, label: 'Global', icon: Globe, color: 'text-neon-pink' },
   ];
 
   return (
