@@ -65,54 +65,33 @@ const MyWorkSection = () => {
         </div>
 
         {/* Video Section */}
-        <div className="max-w-4xl mx-auto">
-          <Card className="card-surface p-8 text-center">
-            <h4 className="text-2xl font-bold mb-4 text-neon">
-              {categoryTitles[activeCategory]}
-            </h4>
-            <p className="text-muted-foreground mb-6">
-              {someinfoaboutvideo[activeCategory]}
-            </p>
+<div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+  {Object.keys(videoSources).map((key) => {
+    const category = key as WorkCategory;
+    return (
+      <Card key={category} className="card-surface p-8 text-center">
+        <h4 className="text-2xl font-bold mb-4 text-neon">
+          {categoryTitles[category]}
+        </h4>
+        <p className="text-muted-foreground mb-6">
+          {someinfoaboutvideo[category]}
+        </p>
 
-            <div className="aspect-video bg-surface-darker rounded-lg overflow-hidden border border-primary/30">
-              <video
-                className="w-full h-full object-cover"
-                controls
-                muted
-                preload="metadata"
-                key={activeCategory}
-              >
-                <source src={videoSources[activeCategory]} type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-            </div>
-          </Card>
+        <div className="aspect-video bg-surface-darker rounded-lg overflow-hidden border border-primary/30">
+          <video
+            className="w-full h-full object-cover"
+            controls
+            muted
+            preload="metadata"
+          >
+            <source src={videoSources[category]} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
         </div>
-      </div>
-        <div className="max-w-4xl mx-auto">
-          <Card className="card-surface p-8 text-center">
-            <h4 className="text-2xl font-bold mb-4 text-neon">
-              {categoryTitles[activeCategory]}
-            </h4>
-            <p className="text-muted-foreground mb-6">
-              {someinfoaboutvideo[activeCategory]}
-            </p>
-
-            <div className="aspect-video bg-surface-darker rounded-lg overflow-hidden border border-primary/30">
-              <video
-                className="w-full h-full object-cover"
-                controls
-                muted
-                preload="metadata"
-                key={activeCategory}
-              >
-                <source src={videoSources[activeCategory]} type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-            </div>
-          </Card>
-        </div>
-      </div>
+      </Card>
+    );
+  })}
+</div>
     </section>
   );
 };
