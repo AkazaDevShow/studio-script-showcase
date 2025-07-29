@@ -9,7 +9,7 @@ interface HeroSectionProps {
   onSectionChange: (section: Section) => void;
 }
 
-const HeroSection = () => {
+const HeroSection = ({ onSectionChange }: HeroSectionProps) => {
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
       {/* Background Image */}
@@ -29,9 +29,8 @@ const HeroSection = () => {
           </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
-I'm AkazaDev, a developer with 3 years of experience in Lua scripting
+            I'm AkazaDev, a developer with 3 years of experience in Lua scripting
           </p>
-          
           
           <div className="flex justify-center">
             <Button
