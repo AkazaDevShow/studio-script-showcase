@@ -12,12 +12,12 @@ const videoSources: Record<WorkCategory, string> = {
 
 const categoryTitles: Record<WorkCategory, string> = {
   server: 'Steal A Somthing Systems ( steal working )',
-  client: 'soon',
+  client: 'Case open system ( gui )',
 };
 
 const someinfoaboutvideo: Record<WorkCategory, string> = {
-  server: 'Steal A Somthing Systems ( steal working )',
-  client: 'soon',
+  server: 'this',
+  client: 'i try make ',
 };
 
 const MyWorkSection = () => {
@@ -65,6 +65,30 @@ const MyWorkSection = () => {
         </div>
 
         {/* Video Section */}
+        <div className="max-w-4xl mx-auto">
+          <Card className="card-surface p-8 text-center">
+            <h4 className="text-2xl font-bold mb-4 text-neon">
+              {categoryTitles[activeCategory]}
+            </h4>
+            <p className="text-muted-foreground mb-6">
+              {someinfoaboutvideo[activeCategory]}
+            </p>
+
+            <div className="aspect-video bg-surface-darker rounded-lg overflow-hidden border border-primary/30">
+              <video
+                className="w-full h-full object-cover"
+                controls
+                muted
+                preload="metadata"
+                key={activeCategory}
+              >
+                <source src={videoSources[activeCategory]} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </Card>
+        </div>
+      </div>
         <div className="max-w-4xl mx-auto">
           <Card className="card-surface p-8 text-center">
             <h4 className="text-2xl font-bold mb-4 text-neon">
