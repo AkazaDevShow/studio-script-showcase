@@ -4,9 +4,8 @@ import Navigation from '@/components/Navigation';
 import MyWorkSection from '@/components/MyWorkSection';
 import PricingSection from '@/components/PricingSection';
 import ContactSection from '@/components/ContactSection';
-import TermsSection from '@/components/TermsSection';
 
-type Section = 'home' | 'work' | 'pricing' | 'contact' | 'terms';
+type Section = 'home' | 'work' | 'pricing' | 'contact';
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState<Section>('home');
@@ -21,8 +20,6 @@ const Index = () => {
         return <PricingSection />;
       case 'contact':
         return <ContactSection />;
-      case 'terms':
-        return <TermsSection />;
       default:
         return <HeroSection />;
     }
@@ -30,8 +27,12 @@ const Index = () => {
 
   return (
     <div className="min-h-screen">
-      <Navigation activeSection={activeSection} onSectionChange={setActiveSection} />
-      <main className="transition-all duration-500 ease-in-out">
+      <Navigation
+        activeSection={activeSection}
+        onSectionChange={setActiveSection}
+      />
+      {/* Add padding-top to compensate for fixed navbar */}
+      <main className="pt-24 transition-all duration-500 ease-in-out">
         {renderActiveSection()}
       </main>
     </div>
