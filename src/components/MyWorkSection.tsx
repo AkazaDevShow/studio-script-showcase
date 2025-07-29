@@ -16,24 +16,24 @@ const videosByCategory: Record<WorkCategory, VideoItem[]> = {
     {
       title: 'Steal A Something Systems (working)',
       src: '/Steal-A-System.mp4',
-      description: 'This is the main steal system video.',
+      description: 'i make game like steal a somthing',
     },
     {
-      title: 'Steal System Demo 2',
-      src: '/Steal-System-Demo2.mp4',
-      description: 'A demo video showing advanced features.',
+      title: 'soon',
+      src: '/soon.mp4',
+      description: 'soon',
     },
   ],
   client: [
     {
       title: 'Case Open System (GUI)',
       src: '/Case-System.mp4',
-      description: 'User interface for case opening.',
+      description: 'gui open case system show for you only the open',
     },
     {
-      title: 'Case System Demo 2',
-      src: '/Case-System-Demo2.mp4',
-      description: 'More detailed demo of the GUI system.',
+      title: 'soon',
+      src: '/soon.mp4',
+      description: 'soon',
     },
   ],
 };
