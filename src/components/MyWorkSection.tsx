@@ -52,7 +52,7 @@ const MyWorkSection = () => {
         <div className="text-center mb-12">
           <h2 className="text-5xl font-bold mb-6 text-gradient">My Work</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Explore different categories of scripts I create for Roblox games
+            Check Some Of My Work !
           </p>
         </div>
 
