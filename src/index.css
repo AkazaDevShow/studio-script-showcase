@@ -2,70 +2,64 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Roblox Scripter Portfolio Design System - Light Baby Blue Theme */
+/* Roblox Scripter Portfolio Design System - Black + Light Baby Blue */
 
 @layer base {
   :root {
-    /* Soft Light Blue Theme */
-    --background: 210 100% 98%;
-    --foreground: 220 30% 15%;
+    --background: 215 30% 6%;          /* #0B0E11 (Very dark navy/black) */
+    --foreground: 210 80% 97%;         /* #E6F4FF (very light baby blue) */
 
-    --card: 210 100% 95%;
-    --card-foreground: 220 30% 15%;
+    --card: 215 25% 10%;
+    --card-foreground: 210 80% 97%;
 
-    --popover: 210 100% 95%;
-    --popover-foreground: 220 30% 15%;
+    --popover: 215 25% 10%;
+    --popover-foreground: 210 80% 97%;
 
-    --primary: 210 100% 65%;
-    --primary-foreground: 220 30% 15%;
+    --primary: 210 90% 70%;            /* #7CC8FF (soft light blue) */
+    --primary-foreground: 215 30% 6%;  /* background for contrast */
 
-    --secondary: 210 60% 85%;
-    --secondary-foreground: 220 30% 15%;
+    --secondary: 210 50% 20%;
+    --secondary-foreground: 210 80% 97%;
 
-    --muted: 210 60% 90%;
-    --muted-foreground: 220 10% 40%;
+    --muted: 215 25% 20%;
+    --muted-foreground: 210 25% 70%;
 
-    --accent: 240 100% 90%;
-    --accent-foreground: 220 30% 15%;
+    --accent: 210 80% 80%;             /* baby blue for glow accents */
+    --accent-foreground: 215 30% 6%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive-foreground: 210 80% 97%;
 
-    --border: 210 40% 90%;
-    --input: 210 40% 90%;
-    --ring: 210 100% 65%;
+    --border: 215 20% 20%;
+    --input: 215 20% 20%;
+    --ring: 210 90% 70%;
 
     --radius: 0.75rem;
 
-    /* Custom design tokens */
-    --neon-blue: 210 100% 65%;
-    --neon-lavender: 240 100% 90%;
-    --light-surface: 210 100% 96%;
-    --lighter-surface: 210 100% 98%;
+    --neon-blue: 210 90% 70%;          /* glowing blue */
+    --soft-blue: 210 100% 92%;         /* for backgrounds or gradients */
+    --dark-surface: 215 25% 12%;
+    --darker-surface: 215 30% 6%;
 
-    /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(var(--lighter-surface)), hsl(var(--light-surface)));
-    --gradient-neon: linear-gradient(135deg, hsl(var(--neon-blue)), hsl(var(--neon-lavender)));
-    --gradient-card: linear-gradient(145deg, hsl(var(--light-surface)), hsl(var(--lighter-surface)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--darker-surface)), hsl(var(--dark-surface)));
+    --gradient-neon: linear-gradient(135deg, hsl(var(--neon-blue)), hsl(var(--soft-blue)));
+    --gradient-card: linear-gradient(145deg, hsl(var(--dark-surface)), hsl(var(--darker-surface)));
 
-    /* Shadows */
-    --shadow-neon: 0 0 20px hsl(var(--neon-blue) / 0.2);
-    --shadow-card: 0 4px 16px hsl(210 30% 70% / 0.3);
-    --shadow-elevated: 0 8px 32px hsl(210 30% 60% / 0.25);
+    --shadow-neon: 0 0 20px hsl(var(--neon-blue) / 0.3);
+    --shadow-card: 0 4px 20px hsl(210 40% 10% / 0.5);
+    --shadow-elevated: 0 8px 32px hsl(210 40% 10% / 0.7);
 
-    /* Animations */
     --transition-smooth: all 0.3s ease-in-out;
     --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
-    /* Sidebar (light style) */
-    --sidebar-background: 210 100% 96%;
-    --sidebar-foreground: 220 30% 15%;
-    --sidebar-primary: 210 100% 65%;
-    --sidebar-primary-foreground: 220 30% 15%;
-    --sidebar-accent: 240 100% 90%;
-    --sidebar-accent-foreground: 220 30% 15%;
-    --sidebar-border: 210 40% 90%;
-    --sidebar-ring: 210 100% 65%;
+    --sidebar-background: 215 30% 6%;
+    --sidebar-foreground: 210 80% 97%;
+    --sidebar-primary: 210 90% 70%;
+    --sidebar-primary-foreground: 215 30% 6%;
+    --sidebar-accent: 210 80% 85%;
+    --sidebar-accent-foreground: 215 30% 6%;
+    --sidebar-border: 215 20% 20%;
+    --sidebar-ring: 210 90% 70%;
   }
 
   * {
@@ -91,7 +85,7 @@
 
   .text-neon {
     color: hsl(var(--neon-blue));
-    text-shadow: 0 0 10px hsl(var(--neon-blue) / 0.4);
+    text-shadow: 0 0 10px hsl(var(--neon-blue) / 0.5);
   }
 
   .text-gradient {
@@ -108,9 +102,9 @@
 
 @keyframes glow {
   from {
-    box-shadow: 0 0 20px hsl(var(--neon-blue) / 0.2);
+    box-shadow: 0 0 20px hsl(var(--neon-blue) / 0.3);
   }
   to {
-    box-shadow: 0 0 30px hsl(var(--neon-blue) / 0.4), 0 0 40px hsl(var(--neon-lavender) / 0.2);
+    box-shadow: 0 0 30px hsl(var(--neon-blue) / 0.6), 0 0 40px hsl(var(--soft-blue) / 0.2);
   }
 }
