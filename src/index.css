@@ -2,111 +2,70 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Roblox Scripter Portfolio Design System */
+/* Roblox Scripter Portfolio Design System - Light Baby Blue Theme */
 
 @layer base {
   :root {
-    /* 🧡 Black + Orange Design System */
-    --background: 220 20% 6%;
-    --foreground: 40 20% 96%;
+    /* Soft Light Blue Theme */
+    --background: 210 100% 98%;
+    --foreground: 220 30% 15%;
 
-    --card: 220 15% 10%;
-    --card-foreground: 40 20% 96%;
+    --card: 210 100% 95%;
+    --card-foreground: 220 30% 15%;
 
-    --popover: 220 15% 10%;
-    --popover-foreground: 40 20% 96%;
+    --popover: 210 100% 95%;
+    --popover-foreground: 220 30% 15%;
 
-    --primary: 32 100% 50%;
-    --primary-foreground: 220 20% 6%;
+    --primary: 210 100% 65%;
+    --primary-foreground: 220 30% 15%;
 
-    --secondary: 30 20% 20%;
-    --secondary-foreground: 40 20% 96%;
+    --secondary: 210 60% 85%;
+    --secondary-foreground: 220 30% 15%;
 
-    --muted: 30 15% 20%;
-    --muted-foreground: 30 10% 65%;
+    --muted: 210 60% 90%;
+    --muted-foreground: 220 10% 40%;
 
-    --accent: 45 100% 50%;
-    --accent-foreground: 220 20% 6%;
+    --accent: 240 100% 90%;
+    --accent-foreground: 220 30% 15%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 40 20% 96%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 220 10% 20%;
-    --input: 220 10% 20%;
-    --ring: 32 100% 50%;
+    --border: 210 40% 90%;
+    --input: 210 40% 90%;
+    --ring: 210 100% 65%;
 
     --radius: 0.75rem;
 
-    --neon-orange: 32 100% 50%;
-    --neon-gold: 45 100% 50%;
-    --dark-surface: 220 15% 10%;
-    --darker-surface: 220 20% 6%;
+    /* Custom design tokens */
+    --neon-blue: 210 100% 65%;
+    --neon-lavender: 240 100% 90%;
+    --light-surface: 210 100% 96%;
+    --lighter-surface: 210 100% 98%;
 
     /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(var(--darker-surface)), hsl(var(--dark-surface)));
-    --gradient-neon: linear-gradient(135deg, hsl(var(--neon-orange)), hsl(var(--neon-gold)));
-    --gradient-card: linear-gradient(145deg, hsl(var(--dark-surface)), hsl(var(--darker-surface)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--lighter-surface)), hsl(var(--light-surface)));
+    --gradient-neon: linear-gradient(135deg, hsl(var(--neon-blue)), hsl(var(--neon-lavender)));
+    --gradient-card: linear-gradient(145deg, hsl(var(--light-surface)), hsl(var(--lighter-surface)));
 
-    /* Shadows with orange glow */
-    --shadow-neon: 0 0 20px hsl(var(--neon-orange) / 0.3);
-    --shadow-card: 0 8px 32px hsl(0 0% 0% / 0.5);
-    --shadow-elevated: 0 16px 64px hsl(0 0% 0% / 0.7);
+    /* Shadows */
+    --shadow-neon: 0 0 20px hsl(var(--neon-blue) / 0.2);
+    --shadow-card: 0 4px 16px hsl(210 30% 70% / 0.3);
+    --shadow-elevated: 0 8px 32px hsl(210 30% 60% / 0.25);
 
     /* Animations */
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: all 0.3s ease-in-out;
     --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
-    /* Sidebar colors */
-    --sidebar-background: 220 20% 6%;
-    --sidebar-foreground: 40 20% 96%;
-
-    --sidebar-primary: 32 100% 50%;
-    --sidebar-primary-foreground: 220 20% 6%;
-
-    --sidebar-accent: 45 100% 50%;
-    --sidebar-accent-foreground: 220 20% 6%;
-
-    --sidebar-border: 220 10% 20%;
-    --sidebar-ring: 32 100% 50%;
-  }
-
-  .dark {
-    --background: 220 20% 6%;
-    --foreground: 40 20% 96%;
-
-    --card: 220 15% 10%;
-    --card-foreground: 40 20% 96%;
-
-    --popover: 220 15% 10%;
-    --popover-foreground: 40 20% 96%;
-
-    --primary: 40 100% 85%;
-    --primary-foreground: 220 20% 6%;
-
-    --secondary: 30 20% 20%;
-    --secondary-foreground: 40 20% 96%;
-
-    --muted: 30 15% 20%;
-    --muted-foreground: 30 10% 65%;
-
-    --accent: 45 100% 50%;
-    --accent-foreground: 220 20% 6%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 40 20% 96%;
-
-    --border: 220 10% 20%;
-    --input: 220 10% 20%;
-    --ring: 32 100% 50%;
-
-    --sidebar-background: 220 20% 6%;
-    --sidebar-foreground: 40 20% 96%;
-    --sidebar-primary: 32 100% 50%;
-    --sidebar-primary-foreground: 220 20% 6%;
-    --sidebar-accent: 45 100% 50%;
-    --sidebar-accent-foreground: 220 20% 6%;
-    --sidebar-border: 220 10% 20%;
-    --sidebar-ring: 32 100% 50%;
+    /* Sidebar (light style) */
+    --sidebar-background: 210 100% 96%;
+    --sidebar-foreground: 220 30% 15%;
+    --sidebar-primary: 210 100% 65%;
+    --sidebar-primary-foreground: 220 30% 15%;
+    --sidebar-accent: 240 100% 90%;
+    --sidebar-accent-foreground: 220 30% 15%;
+    --sidebar-border: 210 40% 90%;
+    --sidebar-ring: 210 100% 65%;
   }
 
   * {
@@ -120,7 +79,6 @@
   }
 }
 
-/* Custom utility classes */
 @layer utilities {
   .glow-effect {
     box-shadow: var(--shadow-neon);
@@ -132,8 +90,8 @@
   }
 
   .text-neon {
-    color: hsl(var(--neon-orange));
-    text-shadow: 0 0 10px hsl(var(--neon-orange) / 0.5);
+    color: hsl(var(--neon-blue));
+    text-shadow: 0 0 10px hsl(var(--neon-blue) / 0.4);
   }
 
   .text-gradient {
@@ -150,9 +108,9 @@
 
 @keyframes glow {
   from {
-    box-shadow: 0 0 20px hsl(var(--neon-orange) / 0.3);
+    box-shadow: 0 0 20px hsl(var(--neon-blue) / 0.2);
   }
   to {
-    box-shadow: 0 0 30px hsl(var(--neon-orange) / 0.6), 0 0 40px hsl(var(--neon-gold) / 0.2);
+    box-shadow: 0 0 30px hsl(var(--neon-blue) / 0.4), 0 0 40px hsl(var(--neon-lavender) / 0.2);
   }
 }
