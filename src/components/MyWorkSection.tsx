@@ -19,9 +19,9 @@ const videosByCategory: Record<WorkCategory, VideoItem[]> = {
       description: 'i make game like steal a somthing',
     },
     {
-      title: 'soon',
-      src: '/soon.mp4',
-      description: 'soon',
+      title: 'Tower Defense Place System',
+      src: '/2025-08-09 00-28-41.mp4',
+      description: 'this is just the place system but other thing i can still create it like data and view tower and wave',
     },
   ],
   client: [
